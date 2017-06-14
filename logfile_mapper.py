@@ -9,9 +9,9 @@ import sys
 import time
 import datetime
 
-        for line in sys.stdin:
-            line = line.rstrip()
-            words = line.split('[')
-   		words = words[1].split(' -0800') #Sample Output 07/Mar/2004:16:10:02
-   		time = datetime.datetime.strptime(words[0], "%d/%b/%Y:%H:%M:%S")
-   		print time.strftime('%Y-%m')+"\t1"
+for line in sys.stdin:
+	line = line.rstrip()
+	words = line.split('[')
+	words = words[1].split(' -0800')
+	time = datetime.datetime.strptime(words[0], "%d/%b/%Y:%H:%M:%S")
+	print(time.strftime('%Y-%m')+"\t1")
