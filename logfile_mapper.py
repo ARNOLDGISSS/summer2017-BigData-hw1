@@ -14,5 +14,5 @@ for line in sys.stdin:
 	words = line.split('[')
 	#words = words[1].split(' -0800')
 	words = re.split(r' -0800| -0700',words[1])
-	time = datetime.strptime(words[0], "%d/%b/%Y:%H:%M:%S")
+	time = datetime.datetime.strptime(words[0], "%d/%b/%Y:%H:%M:%S")
 	print(time.strftime('%Y-%m')+"\t1")
